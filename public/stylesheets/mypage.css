@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.wrapper{
+	text-align: center;;
+	width: 600px;
+}
+
+#changePW{
+	margin-top: 50px;
+}
+
+#past{
+	margin:10px 0 10px 0;
+}

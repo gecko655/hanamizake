@@ -1,0 +1,30 @@
+#{extends 'Layout/main.html' /}
+#{set 'moreStyles'}
+    #{stylesheet 'index.css' /}
+#{/set}
+
+<div class="wrapper">
+<img id="drawingPin1" src="/public/images/pin.png">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<tr><td style="background-image: url(/public/images/paper/1.png)" width="54" height="52"></td>
+			<td style="background-image: url(/public/images/paper/2.png)" height="52"></td>
+			<td style="background-image: url(/public/images/paper/3.png)" width="53" height="52"></td> </tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/4.png)" width="54"></td>
+			<td style="background-image: url(/public/images/paper/5.png)" width="600px" height="300px" id="contentTd">
+<h1 style="color: rgb(80, 100, 45);">単語登録</h1>
+                #{a @MenuController.index(), id:"toTop"}メニューへ戻る#{/a}
+				<p style="margin-top:50px;">　登録完了しました。</p>
+	<p style="margin-top:20px;">#{a @CategoryController.index()}単語登録に戻る#{/a}</p>
+			</td>
+			<td style="background-image: url(/public/images/paper/6.png)" width="53"></td>
+		</tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/7.png)" width="54" height="54"></td>
+			<td style="background-image: url(/public/images/paper/8.png)" height="52"></td>
+			<td style="background-image: url(/public/images/paper/9.png)" width="53" height="54"></td>
+		</tr>
+	</table>
+	<img id="drawingPin2" src="/public/images/pin.png">
+</div>
+

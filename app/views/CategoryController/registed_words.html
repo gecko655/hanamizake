@@ -1,0 +1,88 @@
+#{extends 'Layout/main.html' /}
+#{set 'moreStyles'}
+    #{stylesheet 'mypage.css' /}
+#{/set}
+
+<style type="text/css">
+    #history{
+        font-size:1.4rem;
+    }
+    
+    #history{
+        margin:20px 0 0 70px;
+    }
+    
+    #wordsWrap{
+        font-size: 1.4rem;
+        margin: 20px 0 0 0;
+    }
+    #words tr:first-child{
+        height: 30px;
+    }
+    .wrapper{width:900px;}
+    
+    #editButton{
+        margin: 0px;
+    }
+    #deleteButton{
+        margin: 0px;
+    }
+    </style>
+<div class="wrapper">
+	<img id="drawingPin1" src="/public/images/pin.png">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<td style="background-image: url(/public/images/paper/1.png)" width="54" height="52"></td>
+		<td style="background-image: url(/public/images/paper/2.png)" height="52"></td>
+		<td style="background-image: url(/public/images/paper/3.png)" width="53" height="52"></td> </tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/4.png)" width="54"></td>
+			<td style="background-image: url(/public/images/paper/5.png)" width="900px" height="300px " id="contentTd">
+	<h1 id="title" style="color: #664C00;">登録単語一覧</h1>
+    <p style="margin: 20px 0;">#{a @index()}戻る#{/a}</p>
+    <p>単語の編集、削除は自分で登録したもののみ可能です</p>
+   				<a id="toTop" href="/">menuへ戻る</a>
+	<div id="wordsWrap">
+	<table id="words" style="margin:0 auto 0 auto;">
+		<tr>
+
+			<th width="320px"><span style="font-size:1.8rem">単語</span></th>
+            <th width="20px"></th>
+			<th width="320px"><span style="font-size:1.8rem">読み</span></th>
+			<th width="20px"></th>
+      <th width="55px"></th>
+      <th width="55px"></th>
+		</tr>
+		
+		#{list items:words, as:'word'}
+        <tr height="5px"></tr>
+		<tr style="border-bottom:1px solid #ccc; line-height:1.5;">
+			<td style="font-size:1.6rem;">${word.name}</td>
+            <td></td>
+			<td>${word.key_type}</td>
+			<td></td>
+            <td id="editButton">
+              #{if word.userdata && word.userdata.id == current_user.id}
+			    #{a @word_edit(word.id)}編集#{/a}
+			  #{/if}
+			</td>
+			<td id="deleteButton">
+              #{if word.userdata && word.userdata.id == current_user.id}
+	            #{a @word_delete(word.id), onClick:"return confirm('本当に削除してもよろしいですか?');"}削除#{/a}		
+              #{/if}
+			</td>
+		</tr>
+		#{/list}
+    </table>
+    </div>
+	</td>
+    
+			<td style="background-image: url(/public/images/paper/6.png)" width="53"></td>
+		</tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/7.png)" width="54" height="54"></td>
+			<td style="background-image: url(/public/images/paper/8.png)" height="52"></td>
+			<td style="background-image: url(/public/images/paper/9.png)" width="53" height="54"></td>
+		</tr>
+	</table>
+	<img id="drawingPin2" src="/public/images/pin.png">
+</div>

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.wrapper{
+	text-align: center;;
+	width: 600px;
+}
+
+#regist{
+	margin-top: 50px;
+}
+
+#list_view{
+	margin:10px 0 10px 0;
+}

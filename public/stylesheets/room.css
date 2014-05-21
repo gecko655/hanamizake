@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+#pressSpace{
+	margin-top: 80px;
+	font-size: 2rem; 
+	color:#ccc;
+}
+#romanText{
+	font-family: 'Domine', serif;
+	font-size: 1.8rem;
+	margin-top: 10px;
+}
+
+#hiraganaText span{
+	color: #FFCC00;
+}
+
+#normalText{
+	margin-top: 70px;
+	font-size: 2.2rem;
+}
+
+#sentenceScore{
+	color: rgb(200, 100, 100);
+	margin-top: 20px;
+	font-size: 2.2rem;
+}
+
+#sentenceCombos{
+	color: rgb(200, 200, 0);
+	margin-left: 500px;
+	font-size: 1.7rem;
+}
+
+#sentenceCritical{
+	color: rgb(0, 0, 200);
+	margin-left: 500px;
+	font-size: 1.7rem;
+}
+
+#contentTd{
+		position: relative;
+}
+
+#inputArea{
+
+}
+
+#result_head{
+	font-size: 1.8rem;
+	width: 200px;
+	margin-top: 20px;
+	float: left;
+}
+
+#result_data{
+	font-size: 1.8rem;
+	width: 200px;
+	margin-top: 20px;
+	float: left;
+}
+
+//#score{
+	//position: absolute;
+	//color: rgb(243, 152, 0);
+	//font-size: 1.6rem;
+	//top: -25px;
+	//left: -20px;
+//}
+
+#time{
+	position: absolute;
+	color: rgb(0, 243, 152);
+	font-size: 1.6rem;
+	top: -25px;
+	right: 20px;
+}
+
+#bgm{
+  position:fixed;
+  bottom:0px;
+  right:0px;
+}
+
+#keyboard{
+	margin-top: 70px;
+}

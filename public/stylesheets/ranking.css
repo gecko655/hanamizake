@@ -1,0 +1,27 @@
+#history{
+    font-size:1.4rem;
+    width: 520px;
+    margin: 10px auto;
+}
+    
+#history #tr_head th {
+    padding-bottom: 10px;
+}
+    
+#history td {
+    padding: 5px 0;
+}
+    
+#rank_1,#rank_2,#rank_3 {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+    
+#rank_4,#rank_5,#rank_6,#rank_7,#rank_8,#rank_9,#rank_10 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+    
+.my_history {
+    color: blue;
+}

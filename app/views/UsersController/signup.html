@@ -1,0 +1,65 @@
+#{extends 'Layout/main.html' /}
+#{set 'moreStyles'}    
+    #{stylesheet 'signup.css' /}
+    #{stylesheet 'login.css' /}
+#{/set}
+
+<div class="wrapper">
+<style type="text/css">
+	h1{color:#664C00;}
+	#submitArea input:first-child{margin-left:200px;}
+	#submitArea input:nth-child(2){display:block; float:left; margin-left:15px;}
+	#loginForm table{margin:135px 0 0 150px;}
+</style>
+	<img id="drawingPin1" src="/public/images/pin.png">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<tr><td style="background-image: url(/public/images/paper/1.png)" width="54" height="52"></td>
+			<td style="background-image: url(/public/images/paper/2.png)" height="52"></td>
+			<td style="background-image: url(/public/images/paper/3.png)" width="53" height="52"></td> </tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/4.png)" width="54"></td>
+			<td style="background-image: url(/public/images/paper/5.png)" width="600px" height="300px" id="contentTd">
+				<h1>アカウント登録</h1>
+				<a id="toTop" href="/">topへ戻る</a>
+        #{form @signup_main(), method:'POST', id:'loginForm'}
+                    <table>
+						<tr>
+							<td><label for="inputId">ID</label></td>
+							<td>
+								<input id="inputId" class="rounded" name="username" value="${flash.get('username')}" type="text" style="width: 150px;">
+							</td>
+						</tr>
+						<td colspan="3" style="height:15px;"><span class="error">#{error 'user.username'/}</span></td>
+						<tr>
+							<td><label for="inputPassword">Password</label></td>
+							<td>
+								<input id="inputPassword" class="rounded" name="password" type="password" style="width: 150px;">
+							</td>
+						</tr>
+						<td colspan="3" style="height:15px;"><span class="error">#{error 'user.password' /}</span></td>
+						<tr>
+							<td><label for="inputPasswordConfirm">Password</label></td>
+							<td>
+								<input id="inputPasswordConfirm" class="rounded" name="password_confirm" type="password" style="width: 150px;">
+							</td>
+						</tr>
+						<td colspan="3" style="height:10px;"><span class="error">${flash.get("password_confirm_error")}</span></td>
+					</table>
+					<div id="submitArea" class="clearfix">
+						<input type="submit" value="登録" id="submit" class="cssBtn">
+						<input type="reset" value="キャンセル" id="cancel" class="cssBtn">
+					</div>
+	#{/form}
+			</td>
+			<td style="background-image: url(/public/images/paper/6.png)" width="53"></td>
+		</tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/7.png)" width="54" height="54"></td>
+			<td style="background-image: url(/public/images/paper/8.png)" height="52"></td>
+			<td style="background-image: url(/public/images/paper/9.png)" width="53" height="54"></td>
+		</tr>
+	</table>
+	<img id="drawingPin2" src="/public/images/pin.png">
+</div>
+</body>
+</html>

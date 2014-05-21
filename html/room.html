@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/room.css">
+	<link href='http://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="../public/javascripts/room.js"></script>
+<!--  <script type="text/javascript" src="js/room.js"></script>-->
+	<script type="text/javascript">
+		problems = [
+		    ["おなか減った","おなかへった"],
+		    ["ここに文章を入れる","ここにぶんしょうをいれる"],
+		    ["ハローワールド","はろーわーるど"],
+		    ["三音は下げる","さんおんはさげる"],
+		    ["わんこそば","わんこそば"],
+		    ["「っえーい」","「っえーい」"],
+		]
+	</script>
+	<style type="text/css">
+
+	</style>
+	<title>マッチングルーム</title>
+</head>
+<body>
+<div class="wrapper">
+	<div id="inputArea">
+		<p style="margin-top: 80px; font-size: 2rem; color:#ccc">スペースを入力してください</p>
+	</div>
+	<div id="resultArea" style="display:none;">
+    	<div id="result_head">スコア</div>
+    	<div id="result_data" class="clearfix"><span id="result_score"></span></div>
+    	<div id="result_head">時間</div>
+    	<div id="result_data" class="clearfix"><span id="result_time"></span></div>
+    	<div id="result_head">ミスタイプ数</div>
+    	<div id="result_data" class="clearfix"><span id="result_missCount"></span></div>
+	</div>
+</div>
+</body>
+</html>

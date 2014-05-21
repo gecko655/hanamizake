@@ -1,0 +1,68 @@
+#{extends 'Layout/main.html' /}
+#{set 'moreStyles'}
+    #{stylesheet 'index.css' /}
+    #{stylesheet 'login.css' /}
+<style type="text/css">
+    h1{color:#664C00;}
+    #submitArea input:first-child{margin-left:200px;}
+    #submitArea input:nth-child(2){display:block; float:left; margin-left:15px;}
+    #loginForm table{margin:135px 0 0 150px;}
+    li{font-size: 1.4rem; line-height:1.2;}
+    #cation{margin:10px 0 0 0;}
+    #input{margin: 60px auto 0 170px}
+    #submitArea{margin-top: 40px;}
+    label{font-size:1.2rem;}
+    #input tr td:nth-child(2){display:block; float:left; margin-left:15px;}
+</style>
+#{/set}
+
+<div class="wrapper">
+    <img id="drawingPin1" src="/public/images/pin.png">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <td style="background-image: url(/public/images/paper/1.png)" width="54" height="52"></td>
+        <td style="background-image: url(/public/images/paper/2.png)" height="52"></td>
+        <td style="background-image: url(/public/images/paper/3.png)" width="53" height="52"></td> </tr>
+        <tr>
+            <td style="background-image: url(/public/images/paper/4.png)" width="54"></td>
+            <td style="background-image: url(/public/images/paper/5.png)" width="900px" height="300px " id="contentTd">
+        <h1>単語編集</h1>
+                #{a @MenuController.index(), id:"toTop"}メニューへ戻る#{/a}
+                <p id="cation">
+                    <li>既に登録されている単語、「読み」は登録されません</li>
+                    <li>登録出来る「読み」は英数字、平仮名、「、。,.!?！？」のみです</li>
+                </p>
+        #{form @word_edit_main(word.id), method:'POST', id:'word_regist'}
+                    <table id="input">
+                        <tr>
+                            <td><label for="inputId">単語名</label></td>
+                            <td>
+                                <input id="inputId" class="rounded" name="name" value="${word.name}"type="text" style="width: 150px;">
+                            </td>
+                        </tr>
+                            <td colspan="3" style="height:15px;"><span class="error">#{error "word.name" /}</span></td>
+                        <tr>
+                            <td><label for="inputPassword">読み</label></td>
+                            <td>
+                                <input id="inputPassword" class="rounded" name="key_type" value="${word.key_type}" type="text" style="width: 150px;">
+                            </td>
+                        </tr>
+                        <td colspan="3" style="height:15px;"><span class="error">#{error "word.key_type" /}</span></td>  
+            
+                    </table>
+                    <div id="submitArea" class="clearfix">
+                        <input type="submit" value="登録" id="submit" class="cssBtn">
+                        #{a @registed_words(), id:"cancel", class:"cssBtn"}キャンセル#{/a}
+                    </div>
+    #{/form}
+    </td>
+    
+            <td style="background-image: url(/public/images/paper/6.png)" width="53"></td>
+        </tr>
+        <tr>
+            <td style="background-image: url(/public/images/paper/7.png)" width="54" height="54"></td>
+            <td style="background-image: url(/public/images/paper/8.png)" height="52"></td>
+            <td style="background-image: url(/public/images/paper/9.png)" width="53" height="54"></td>
+        </tr>
+    </table>
+    <img id="drawingPin2" src="/public/images/pin.png">
+</div>

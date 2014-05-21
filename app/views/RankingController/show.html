@@ -1,0 +1,54 @@
+#{extends 'Layout/main.html' /}
+#{set 'moreStyles'}
+    #{stylesheet 'ranking.css' /}
+#{/set}
+
+<div class="wrapper">
+	<img id="drawingPin1" src="/public/images/pin.png">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<td style="background-image: url(/public/images/paper/1.png)" width="54" height="52"></td>
+		<td style="background-image: url(/public/images/paper/2.png)" height="52"></td>
+		<td style="background-image: url(/public/images/paper/3.png)" width="53" height="52"></td> </tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/4.png)" width="54"></td>
+			<td style="background-image: url(/public/images/paper/5.png)" width="600px" height="300px" id="contentTd">
+
+	<h1 style="margin-bottom: 30px;">${category.name}ランキング</h1>
+	<p style="margin: 20px 0;">#{a @index()}ランキング選択画面に戻る#{/a}</p>
+	
+	<table id="history">
+		<tr id="tr_head">
+		    <th width="60px">順位</th>
+			<th width="100px">名前</th>
+			<th width="200px">スコア</th>
+			<th width="80px">時間<br>[秒]</th>
+			<th width="80px">誤入力<br>回数</th>
+		</tr>
+		
+		#{list items:histories, as:'history'}
+            #{if history.userdata.id == current_user.id }
+                <tr id="rank_${history_index}" class="my_history">            
+            #{/if}
+            #{else}
+                <tr id="rank_${history_index}">
+            #{/else}
+                <td class="history_index">${history_index}</td>
+                <td class="user_name">${history.userdata.username}</td>
+                <td class="history_score">${history.score}</td>
+                <td class="history_time">${history.time}</td>
+                <td class="history_missCount">${history.missCount}</td>
+            </tr>
+		#{/list}
+        </table>
+	</td>
+    
+			<td style="background-image: url(/public/images/paper/6.png)" width="53"></td>
+		</tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/7.png)" width="54" height="54"></td>
+			<td style="background-image: url(/public/images/paper/8.png)" height="52"></td>
+			<td style="background-image: url(/public/images/paper/9.png)" width="53" height="54"></td>
+		</tr>
+	</table>
+	<img id="drawingPin2" src="/public/images/pin.png">
+</div>

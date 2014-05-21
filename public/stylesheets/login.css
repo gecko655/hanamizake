@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.wrapper{
+	text-align: center;;
+	width: 600px;
+}
+
+h1{
+	margin-top: 10px;
+}
+
+#loginForm{
+	margin-top: 20px;
+}
+
+#loginForm table{
+	margin: 120px 0 0 150px;
+}
+
+#loginForm #submitArea{
+	margin: 20px 0 10px 0;
+}
+
+#loginForm table tr:first-child td:first-child{
+	width: 80px;
+}
+
+#loginForm label{
+	font-size: 1.4rem;
+	position: relative;
+	top: 4px;
+	color: #000;
+}
+
+#submitArea input {
+	display: block;
+	float: left;
+	margin-left: 180px;
+}
+
+#submitArea a{
+	display: block;	
+	float: left;
+	margin-left: 10px;
+	font-size: 1.2rem;
+	margin-top: 8px;
+}

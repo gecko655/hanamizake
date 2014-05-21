@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>にゅーたいぷ</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        #{stylesheet 'default.css' /}
+        #{stylesheet 'common.css' /}
+        #{get 'moreStyles' /}
+
+        #{script 'jquery-1.8.3.js' /}
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+        #{doLayout /}
+    </body>
+</html>

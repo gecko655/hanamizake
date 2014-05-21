@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.wrapper{
+	text-align: center;;
+	width: 600px;
+}
+
+#title{
+	margin-top: 10px;
+	color: #333;
+}
+
+#login{
+	margin: 50px 0 0 170px;
+	background-image: url(/public/images/btnBackground.png);
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 50px;
+}
+
+#login a{
+	color: rgba(150, 150, 50, 1);
+	display: block;
+	padding-top: 20px;
+}
+
+#register{
+	margin: 10px 0 0 170px;
+	background-image: url(/public/images/btnBackground.png);
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 50px;
+}
+
+#register a{
+	color: rgba(150, 150, 50, 1);
+	display: block;
+	padding-top: 20px;
+}

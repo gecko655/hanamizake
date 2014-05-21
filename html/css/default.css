@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+html{
+	font-size: 62.5%;
+}
+
+h1{
+	font-size: 2.8rem;
+}
+
+p{
+	font-size: 1.6rem;
+}
+
+a{
+	text-decoration: none;
+	color: #6666ff;
+}
+
+a:hover{
+	opacity: 0.6;
+}
+
+.wrapper{
+	width: 760px;
+	margin: 10px auto 0 auto;
+	border: solid 1px #cccccc;
+	overflow: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1; /* for IE 6/7 only */
+}
+

@@ -1,0 +1,60 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+ 
+# Ignore favicon/robots requests
+GET     /favicon.ico                            404
+GET     /robots.txt                             404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+#Application
+GET		/?										Application.index
+
+#UsersController
+GET		/users						UsersController.index
+GET		/users/signup				UsersController.signup
+GET		/users/signup_complete		UsersController.signup_complete
+POST	/users/signup_main			UsersController.signup_main
+GET		/users/login				UsersController.login
+POST	/users/login_main			UsersController.login_main
+GET		/users/login_complete		UsersController.login_complete
+GET		/users/logout				UsersController.logout
+GET		/users/quit_form			UsersController.quit_form
+POST	/users/quit					UsersController.quit
+GET		/users/quit_complte			UsersController.quit_complete
+
+#MyPageController
+GET		/mypage/							MyPageController.index
+GET		/mypage/password_change_form		MyPageController.password_change_form
+POST	/mypage/password_change				MyPageController.password_change
+GET		/mypage/password_change_complete	MyPageController.password_change_complete
+GET		/mypage/history						MyPageController.history
+GET		/mypage/history_detail				MyPageController.history_detail
+
+
+#MenuController
+GET		/menu							MenuController.index
+GET		/menu/game_select				MenuController.game_select
+
+#TypingController
+GET		/typing/main				TypingController.main
+POST	/typing/result				TypingController.result
+
+#CategoryController
+GET    /category                     CategoryController.index
+GET    /category/registed_words       CategoryController.registed_words
+GET   /category/word_regist          CategoryController.word_regist
+POST   /category/word_regist_main     CategoryController.word_regist_main
+GET	   /category/word_regist_complete CategoryController.word_regist_complete
+POST	   /category/word_delete          CategoryController.word_delete
+GET	   /category/word_delete_complete          CategoryController.word_delete_complete
+GET	   /category/word_edit          CategoryController.word_edit
+POST	   /category/word_edit_main          CategoryController.word_edit_main
+GET	   /category/word_edit_complete          CategoryController.word_edit_complete
+
+#RankingController
+GET		/ranking/?					RankingController.index
+GET		/ranking/show/{category_id}		RankingController.show
+GET     /ranking/total_score       RankingController.total_score

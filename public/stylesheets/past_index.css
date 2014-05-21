@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.content{
+	width: 640px;
+	margin: 30px 0 30px 20px;
+	border: 1px solid #CCC;
+	float: left;
+}
+
+.sidebar{
+	width: 196px;
+	margin: 30px 0 0 20px;
+	border: 1px solid #CCC;
+	float: left;
+}
+
+.waitingRoom{
+	width: 180px;
+	height: 180px;
+	background-color: #CCC;
+	float: left;
+}
+
+.roomColumn{
+	margin-top: 20px;
+}
+
+.roomColumn a{
+	text-decoration: none;
+	font-size: 1.6rem;
+	color: #000;
+}
+
+
+.roomColumnBottom{
+	margin-bottom: 20px;
+}
+
+.leftRoom{
+	margin: 0 0 0 20px;
+}
+
+.centerRoom{
+	margin: 0 0 0 30px
+}
+
+.rightRoom{
+	margin: 0 0 0 30px;
+}
+
+
+

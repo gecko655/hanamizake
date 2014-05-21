@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file provides limited functionalities for system without Python.
+If Python is available, the play command is recommended over this build file.
+
+Usage:
+Example 1:
+    export PLAY_PATH=/home/user/play
+    ant run
+Sets play path to the environment variable PLAY_PATH and then runs play with target run.
+
+Example 2:
+    ant run -Dplay.path=/home/user/play
+Gives the play path to the ant as command line property.
+
+Example 3:
+  build.xml:
+    ...
+    <property name="play.path" value="/home/user/play"/>
+    ...
+
+    ant run
+Sets the play path to the build.xml directly.
+-->
+<project name="exp4todo" basedir=".">
+
+    <property environment="env"/>
+    <property name="play.path" value="${env.PLAY_PATH}"/>
+    <import file="${play.path}/resources/application-build.xml"/>
+
+    <!-- The followings are added for exp4 -->
+    <property name="app.dir" value="." />
+    <property name="log.dir" value="${app.dir}/logs" />
+    <property name="zip.file" value="${env.USER}.zip" />
+    <target name="logclean">
+        <delete>
+            <fileset dir="logs" includes="*" />
+        </delete>
+    </target>
+    <target name="catalogclean">
+        <delete>
+            <fileset dir="." includes="**/._*" defaultexcludes="no" />
+        </delete>
+    </target>
+    <target name="pack" depends="logclean,catalogclean">
+        <zip destfile="${zip.file}" basedir="${app.dir}" update="true" />
+    </target>
+
+</project>

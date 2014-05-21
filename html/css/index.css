@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+#navLogin{
+	float: right;
+	margin-right: 30px;
+	font-size: 1.4rem;
+	margin-top: 5px;
+}
+
+#topTitle{
+	margin: 10px 0 0 205px;
+	clear: both;
+	color: #333;
+	width: 344px;
+	height: 80px;
+	text-indent: -9999px;
+	background: url("../img/topLogo.png");
+	/*http://cooltext.com/*/
+}
+
+.wrapper{
+	overflow: hidden;
+}
+
+.content{
+	width: 660px;
+	margin: 0px 50px 0 50px;
+	float: left;
+	overflow: hidden;
+}
+
+#buttonWrapper{
+	margin: 70px 0 40px 0;
+	text-align: center;
+}
+
+#duelaButton{
+	display: block;
+}
+
+#loginButton{
+	margin-top: 30px;
+	display: block;
+}
+
+/**
+ * CSS Buttons Generator for your pleasure!
+ * http://www.dextronet.com/css-buttons-generator
+ *
+ * (c) Ondrej Zabojnik <zabojnik@dextronet.com>, released under the MIT license
+ *
+ * Usage:
+ *   <a href="" class="shiny-button"><strong>対戦する</strong></a>
+ *
+ */
+
+.shiny-button {
+	display: inline-block;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 1.1;
+	font-weight: normal;
+	font-family: sans-serif;
+	color: #FFFFFF;
+	font-size: 12px;
+	background-color: #8A8F87;
+	background-image: -webkit-linear-gradient(top, #8d918a 0%, #9f9f9f 48%, #8A8F87 49%, #8A8F87 82%, #989d95 100%);
+	background-image: -moz-linear-gradient(top, #8d918a 0%, #9f9f9f 48%, #8A8F87 49%, #8A8F87 82%, #989d95 100%);
+	background-image: -o-linear-gradient(top, #8d918a 0%, #9f9f9f 48%, #8A8F87 49%, #8A8F87 82%, #989d95 100%);
+	background-image: linear-gradient(top, #8d918a 0%, #9f9f9f 48%, #8A8F87 49%, #8A8F87 82%, #989d95 100%);
+	border-color: hsl(0, 0%, 53%);
+	-webkit-box-shadow: inset 0 0 1px 1px #a6aaa4, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 0 1px 1px #a6aaa4, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 0 1px 1px #a6aaa4, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	-webkit-text-shadow: 1px 1px 1px #575b55;
+	-moz-text-shadow: 1px 1px 1px #575b55;
+	-o-text-shadow: 1px 1px 1px #575b55;
+	text-shadow: 1px 1px 1px #575b55;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	border-radius: 24px;
+	padding: 12px 30px 12px 30px;
+}
+
+.shiny-button strong {
+	letter-spacing: 1px;
+	font-size: 20px;
+}
+
+.shiny-button:hover {
+	color: #FFFFFF;
+	background-color: #92968f;
+	background-image: -webkit-linear-gradient(top, #959892 0%, #a7a7a7 48%, #92968f 49%, #92968f 82%, #a0a49d 100%);
+	background-image: -moz-linear-gradient(top, #959892 0%, #a7a7a7 48%, #92968f 49%, #92968f 82%, #a0a49d 100%);
+	background-image: -o-linear-gradient(top, #959892 0%, #a7a7a7 48%, #92968f 49%, #92968f 82%, #a0a49d 100%);
+	background-image: linear-gradient(top, #959892 0%, #a7a7a7 48%, #92968f 49%, #92968f 82%, #a0a49d 100%);
+	border-color: hsl(0, 0%, 53%);
+	-webkit-box-shadow: inset 0 0 1px 1px #b1b4af, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 0 1px 1px #b1b4af, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 0 1px 1px #b1b4af, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+	-webkit-text-shadow: 1px 1px 1px #5f635c;
+	-moz-text-shadow: 1px 1px 1px #5f635c;
+	-o-text-shadow: 1px 1px 1px #5f635c;
+	text-shadow: 1px 1px 1px #5f635c;
+}
+
+.shiny-button:active {
+	color: #FFFFFF;
+	background-color: #82887f;
+	background-image: -webkit-linear-gradient(top, #7d837a 0%, #8A8F87 100%);
+	background-image: -moz-linear-gradient(top, #7d837a 0%, #8A8F87 100%);
+	background-image: -o-linear-gradient(top, #7d837a 0%, #8A8F87 100%);
+	background-image: linear-gradient(top, #7d837a 0%, #8A8F87 100%);
+	padding: 13px 30px 11px 30px;
+}

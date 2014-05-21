@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+#romanText{
+	font-family: 'Domine', serif;
+	font-size: 1.8rem;
+	margin-top: 10px;
+}
+
+#hiraganaText span{
+	color: #FFCC00;
+}
+
+#hiraganaText{
+	margin-top: 10px;
+	font-size: 1.8rem;
+}
+
+#normalText{
+	margin-top: 30px;
+	font-size: 2.2rem;
+}
+
+#inputArea, #resultArea{
+	text-align: center;
+	width: 660px;
+	height: 200px;
+	margin: 30px 50px 200px 50px;
+	/*background-color: #f1f1ff;*/
+	border: 1px solid #ccc;
+}
+
+#result_head{
+	font-size: 1.8rem;
+	width: 200px;
+	margin-top: 20px;
+	float: left;
+}
+
+#result_data{
+	font-size: 1.8rem;
+	width: 460px;
+	margin-top: 20px;
+	float: left;
+}

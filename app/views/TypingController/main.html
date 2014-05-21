@@ -1,0 +1,124 @@
+#{extends 'Layout/main.html' /}
+#{set 'moreStyles'}
+    #{stylesheet 'room.css' /}
+	<link href='http://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+#{/set}
+#{set 'moreScripts'}
+	#{script 'webgl.js' /}
+	#{script 'room.js' /}   
+	<script type="text/javascript">
+		var problems = [
+			#{list items:words, as:'word'}
+			["${word.name}","${word.key_type}"],
+			#{/list}
+            /*["おなか減った","おなかへった"],
+        ["ここに文章を入れる","ここにぶんしょうをいれる"],
+        ["ハローワールド","はろーわーるど"],
+        ["三音は下げる","さんおんはさげる"],
+        ["わんこそば","わんこそば"],
+        ["「っえーい」","「っえーい」"],*/
+		]
+		
+		category_id = ${category.id};
+		authenticityToken = "${session.getAuthenticityToken()}";
+	</script>
+#{/set}
+<style type="text/css">
+	.wrapper{width:750px;}
+</style>
+
+
+<body onload="main()">
+<div class="wrapper">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<td style="background-image: url(/public/images/paper/1.png)" width="54" height="52"></td>
+		<td style="background-image: url(/public/images/paper/2.png)" height="52"></td>
+		<td style="background-image: url(/public/images/paper/3.png)" width="53" height="52"></td> </tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/4.png)" width="54"></td>
+			<td style="background-image: url(/public/images/paper/5.png)" width="640px" height="200px" id="contentTd">
+				<span id="time" style="display:none;">time:0 </span>
+				<div id="inputArea">
+				  <p id="pressSpace">
+				  スペースを入力してください</p>
+						<p style="margin-top: 40px; font-size: 1.5rem; color:#c00">音が出ます！音量注意</p>
+				</div>
+				<div id="resultArea" style="display:none;">
+					<div class="clearfix">
+    					<div id="result_head">スコア</div>
+    					<div id="result_data"><span id="result_score"></span></div>
+    				</div>
+					<div class="clearfix">
+    					<div id="result_head">時間</div>
+    					<div id="result_data"><span id="result_time"></span></div>
+    				</div>
+					<div class="clearfix">
+    					<div id="result_head">ミスタイプ数</div>
+	    				<div id="result_data"><span id="result_missCount"></span></div>
+    				</div>
+				<div class="clearfix">
+				<div id="result_head"></div>
+    				<div id="result_data">
+    					#{a @main(category.id)}もう一度挑戦する#{/a}
+    				</div>
+    				</div>
+				<div class="clearfix">
+				<div id="result_head"></div>
+    				<div id="result_data">
+    					#{a @MenuController.index()}めにゅーにもどる#{/a}
+    				</div>
+    				</div>
+				</div>
+			</td>
+			<td style="background-image: url(/public/images/paper/6.png)" width="53"></td>
+		</tr>
+		<tr>
+			<td style="background-image: url(/public/images/paper/7.png)" width="54" height="54"></td>
+			<td style="background-image: url(/public/images/paper/8.png)" height="52"></td>
+			<td style="background-image: url(/public/images/paper/9.png)" width="53" height="54"></td>
+		</tr>
+	</table>
+    <p>#{a @MenuController.game_select(), id:"stop", onClick:"stop"}やめる#{/a}<p>
+	<div id="keyboard"><canvas id="view" width="660" height="300"></canvas></div>
+	<section id="nowebgl" style="position: relative;"><div style="font-size: 1.8rem; position: absolute; top: -320px; left: 120px; display: none; text-align:center; color: #555; width:500px; text-align:left;"><p style="color:red; text-align:center; font-size: 1.8rem;">WebGLを有効にしてください</p><br><br><span style="display:block; margin-left:50px;">◆ SafariのWebGLを有効にする<br>環境設定 -&gt; メニューバーに"開発"メニューを表示にチェックを入れる<br>開発 -&gt; WebGLを有効にするにチェックを入れる</span></div></section>
+</div>
+
+<audio id="keysound">
+	<source src="/public/audio/keysound.mp3">
+	<source src="/public/audio/keysound.ogg">
+	<p>ご利用のブラウザでは再生することができません。南無</p>
+</audio>
+<audio id="miss">
+	<source src="/public/audio/miss.mp3">
+	<source src="/public/audio/miss.ogg">
+	<p>ご利用のブラウザでは再生することができません。南無</p>
+</audio>
+<audio id="bell">
+	<source src="/public/audio/bell.mp3">
+	<source src="/public/audio/bell.ogg">
+	<p>ご利用のブラウザでは再生することができません。南無</p>
+</audio>
+<audio id="enter">
+	<source src="/public/audio/enter.mp3">
+	<source src="/public/audio/enter.ogg">
+	<p>ご利用のブラウザでは再生することができません。南無</p>
+</audio>
+<audio id="bgm"controls="true">
+	<source src="/public/audio/bgm.mp3">
+	<source src="/public/audio/bgm.ogg">
+	<p>ご利用のブラウザでは再生することができません。南無</p>
+</audio>
+
+
+#{form @result(), method:'POST', id:'result'}
+	<input type="hidden" name="category_id" value="${category.id}">
+	<input type="hidden" name="time" value="" id="time">
+	<input type="hidden" name="invalid_input_num" value="" id="invalid_input_num">
+#{/form}
+<script type="text/javascript">
+function stop(e){
+    history.go(0);
+}
+</script>
+</body>
+</html>

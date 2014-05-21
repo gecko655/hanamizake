@@ -1,0 +1,28 @@
+/* 全てのテンプレート共通のcssを定義する */
+
+/* エラーメッセージ */
+.error {
+	color: red;
+}
+
+/* 背景紙のラベル */
+.paper_label {
+    background-image: url(/public/images/btnBackground.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 50px;
+}
+
+.paper_label a{
+    color: rgba(150, 150, 50, 1);
+    display: block;
+    padding-top: 20px;
+}
+
+/* 中央寄せ
+ * (親又は自身のwidthを指定しないと有効に成らない)
+ */
+.horizon_center {
+    margin-left: auto;
+    margin-right: auto;
+}
