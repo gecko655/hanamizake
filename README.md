@@ -1,6 +1,6 @@
 hanamizake
 ==========
-I will write REDME.md soon....   
+I will write README.md soon....   
 ┈┈┈┈▅┈┈▕■┈┈┈┈┈   
 ┈┈┈▕┈┈┈╱╲▕■┈┈   
 ┈┈┈╱╲┈┈▏▕╱╲┈   
