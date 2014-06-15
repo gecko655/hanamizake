@@ -3,7 +3,7 @@ hanamizake
 
 Play framework上で動く、タイピング練習ソフトのウェブアプリケーションです。
 
-これは、2013年度の[情報実験第四](http://www.ocw.titech.ac.jp/index.php?module=General&action=T0300&JWC=201327269 "")の授業で5人のチーム開発を行い、作成したものです。
+これは、2013年度の[情報実験第四](http://www.ocw.titech.ac.jp/index.php?module=General&action=T0300&JWC=201327269 "")の授業において5人のチーム(team: hanamizake)で開発を行い、作成したものです。
 
 ### Require
 
